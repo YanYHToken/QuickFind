@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		391EC52B1F4149170034E5C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391EC52A1F4149170034E5C6 /* UIKit.framework */; };
+		391EC5311F41498F0034E5C6 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 391EC5301F41498F0034E5C6 /* UIColor+Category.m */; };
 		39683FDC1F3DFD4100F42D8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39683FDB1F3DFD4100F42D8A /* main.m */; };
 		39683FDF1F3DFD4100F42D8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39683FDE1F3DFD4100F42D8A /* AppDelegate.m */; };
 		39683FE21F3DFD4100F42D8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39683FE11F3DFD4100F42D8A /* ViewController.m */; };
@@ -14,9 +16,18 @@
 		39683FE81F3DFD4100F42D8A /* QuickFind.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39683FE61F3DFD4100F42D8A /* QuickFind.xcdatamodeld */; };
 		39683FEA1F3DFD4100F42D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39683FE91F3DFD4100F42D8A /* Assets.xcassets */; };
 		39683FED1F3DFD4100F42D8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39683FEB1F3DFD4100F42D8A /* LaunchScreen.storyboard */; };
+		39683FF71F3DFDF100F42D8A /* RectVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 39683FF61F3DFDF100F42D8A /* RectVO.m */; };
+		39683FFD1F3DFEA300F42D8A /* ConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 39683FFC1F3DFEA300F42D8A /* ConfigManager.m */; };
+		396840091F3ECC8500F42D8A /* QTreeRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 396840081F3ECC8500F42D8A /* QTreeRect.m */; };
+		3968400C1F3ECCFD00F42D8A /* QTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3968400B1F3ECCFD00F42D8A /* QTreeNode.m */; };
+		3968400F1F3ECF2500F42D8A /* QTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3968400E1F3ECF2500F42D8A /* QTree.m */; };
+		396840121F3EDEE000F42D8A /* QTreeStare.m in Sources */ = {isa = PBXBuildFile; fileRef = 396840111F3EDEE000F42D8A /* QTreeStare.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		391EC52A1F4149170034E5C6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		391EC52F1F41498F0034E5C6 /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
+		391EC5301F41498F0034E5C6 /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
 		39683FD71F3DFD4100F42D8A /* QuickFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39683FDB1F3DFD4100F42D8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39683FDD1F3DFD4100F42D8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -28,6 +39,18 @@
 		39683FE91F3DFD4100F42D8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39683FEC1F3DFD4100F42D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39683FEE1F3DFD4100F42D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39683FF51F3DFDF100F42D8A /* RectVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectVO.h; sourceTree = "<group>"; };
+		39683FF61F3DFDF100F42D8A /* RectVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectVO.m; sourceTree = "<group>"; };
+		39683FFB1F3DFEA300F42D8A /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
+		39683FFC1F3DFEA300F42D8A /* ConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigManager.m; sourceTree = "<group>"; };
+		396840071F3ECC8500F42D8A /* QTreeRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTreeRect.h; sourceTree = "<group>"; };
+		396840081F3ECC8500F42D8A /* QTreeRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTreeRect.m; sourceTree = "<group>"; };
+		3968400A1F3ECCFD00F42D8A /* QTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTreeNode.h; sourceTree = "<group>"; };
+		3968400B1F3ECCFD00F42D8A /* QTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTreeNode.m; sourceTree = "<group>"; };
+		3968400D1F3ECF2500F42D8A /* QTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTree.h; sourceTree = "<group>"; };
+		3968400E1F3ECF2500F42D8A /* QTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTree.m; sourceTree = "<group>"; };
+		396840101F3EDEE000F42D8A /* QTreeStare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTreeStare.h; sourceTree = "<group>"; };
+		396840111F3EDEE000F42D8A /* QTreeStare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTreeStare.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +58,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391EC52B1F4149170034E5C6 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		391EC5291F4149170034E5C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				391EC52A1F4149170034E5C6 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		39683FCE1F3DFD4100F42D8A = {
 			isa = PBXGroup;
 			children = (
 				39683FD91F3DFD4100F42D8A /* QuickFind */,
 				39683FD81F3DFD4100F42D8A /* Products */,
+				391EC5291F4149170034E5C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +93,7 @@
 		39683FD91F3DFD4100F42D8A /* QuickFind */ = {
 			isa = PBXGroup;
 			children = (
+				39683FF41F3DFDC300F42D8A /* FindQTree */,
 				39683FDD1F3DFD4100F42D8A /* AppDelegate.h */,
 				39683FDE1F3DFD4100F42D8A /* AppDelegate.m */,
 				39683FE01F3DFD4100F42D8A /* ViewController.h */,
@@ -80,6 +114,27 @@
 				39683FDB1F3DFD4100F42D8A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39683FF41F3DFDC300F42D8A /* FindQTree */ = {
+			isa = PBXGroup;
+			children = (
+				39683FF51F3DFDF100F42D8A /* RectVO.h */,
+				39683FF61F3DFDF100F42D8A /* RectVO.m */,
+				39683FFB1F3DFEA300F42D8A /* ConfigManager.h */,
+				39683FFC1F3DFEA300F42D8A /* ConfigManager.m */,
+				396840071F3ECC8500F42D8A /* QTreeRect.h */,
+				396840081F3ECC8500F42D8A /* QTreeRect.m */,
+				3968400A1F3ECCFD00F42D8A /* QTreeNode.h */,
+				3968400B1F3ECCFD00F42D8A /* QTreeNode.m */,
+				3968400D1F3ECF2500F42D8A /* QTree.h */,
+				3968400E1F3ECF2500F42D8A /* QTree.m */,
+				396840101F3EDEE000F42D8A /* QTreeStare.h */,
+				396840111F3EDEE000F42D8A /* QTreeStare.m */,
+				391EC52F1F41498F0034E5C6 /* UIColor+Category.h */,
+				391EC5301F41498F0034E5C6 /* UIColor+Category.m */,
+			);
+			name = FindQTree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,9 +210,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				39683FE81F3DFD4100F42D8A /* QuickFind.xcdatamodeld in Sources */,
+				3968400F1F3ECF2500F42D8A /* QTree.m in Sources */,
+				3968400C1F3ECCFD00F42D8A /* QTreeNode.m in Sources */,
+				396840121F3EDEE000F42D8A /* QTreeStare.m in Sources */,
+				391EC5311F41498F0034E5C6 /* UIColor+Category.m in Sources */,
+				39683FFD1F3DFEA300F42D8A /* ConfigManager.m in Sources */,
 				39683FE21F3DFD4100F42D8A /* ViewController.m in Sources */,
 				39683FDF1F3DFD4100F42D8A /* AppDelegate.m in Sources */,
+				396840091F3ECC8500F42D8A /* QTreeRect.m in Sources */,
 				39683FDC1F3DFD4100F42D8A /* main.m in Sources */,
+				39683FF71F3DFDF100F42D8A /* RectVO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -265,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -279,6 +341,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7Q8H5G6TQS;
 				INFOPLIST_FILE = QuickFind/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = qwater.QuickFind;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,6 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7Q8H5G6TQS;
 				INFOPLIST_FILE = QuickFind/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = qwater.QuickFind;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -316,6 +380,7 @@
 				39683FF31F3DFD4100F42D8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
