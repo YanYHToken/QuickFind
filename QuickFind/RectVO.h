@@ -15,6 +15,6 @@
 
 
 - (instancetype)initWith:(int)identity width:(int)width height:(int)height;
-
+   
 
 @end
