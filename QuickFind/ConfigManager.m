@@ -40,7 +40,9 @@
     RectVO *rect8 = [[RectVO alloc] initWith:7 width:100 height:80];
     RectVO *rect9 = [[RectVO alloc] initWith:7 width:90 height:80];
     RectVO *rect10 = [[RectVO alloc] initWith:7 width:120 height:120];
-    return @[rect1, rect2, rect3, rect8, rect9, rect10];
+    RectVO *rect11 = [[RectVO alloc] initWith:7 width:40 height:40];
+    return @[rect1, rect2, rect3, rect8, rect9, rect10, rect11];
+//    return @[rect1];
 }
 
 @end

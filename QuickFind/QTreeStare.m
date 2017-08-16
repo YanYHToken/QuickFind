@@ -58,13 +58,6 @@
     NSLog(@"%@,   %@", self.minRect, self.maxRect);
 }
 
-- (BOOL)check:(QTreeRect *)rect
-{
-    if (rect.width < self.minRect.width || rect.height < self.minRect.height) {
-        return NO;
-    }
-    return YES;
-}
 
 
 /**
@@ -99,7 +92,8 @@
             else
             {
                 //可绘制区域
-                if (childRect.width > 0 && childRect.height > 0) {
+                if (childRect.width > 0 && childRect.height > 0)
+                {
                     [self.blank addObject:childRect];
                 }
             }

@@ -38,13 +38,21 @@ float random_yyh()
         self.root.rect = rect;
         //🌲的深度
         self.root.level = _depth;
-        self.minRect = [[RectVO alloc] initWith:0 width:80 height:80];
         //创建子🌲
         [self buildBranch:self.root];
     }
     return self;
 }
 
+
+- (RectVO *)minRect
+{
+    if(!_minRect)
+    {
+        _minRect = [[RectVO alloc] initWith:0 width:80 height:80];
+    }
+    return _minRect;
+}
 
 /**
  * 创建parent的四个子节点
@@ -101,7 +109,7 @@ float random_yyh()
 - (BOOL)check:(QTreeRect *)rect
 {
     //区域大小判断
-    if (rect.width < self.minRect.width || rect.height < self.minRect.height) {
+    if (rect.width < self.minRect.width && rect.height < self.minRect.height) {
         return NO;
     }
     return YES;
