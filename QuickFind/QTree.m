@@ -131,6 +131,7 @@ float random_yyh()
     for (int len = 4; i < len; i++)
     {
         QTreeRect *r = [[QTreeRect alloc] init];
+        r.data = [rect data];
         r.width = nw;
         r.height = nh;
         switch (i) {
