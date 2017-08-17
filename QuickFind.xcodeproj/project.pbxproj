@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		391EC52B1F4149170034E5C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391EC52A1F4149170034E5C6 /* UIKit.framework */; };
 		391EC5311F41498F0034E5C6 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 391EC5301F41498F0034E5C6 /* UIColor+Category.m */; };
+		391EC5371F4537090034E5C6 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 391EC5361F4537090034E5C6 /* MapView.m */; };
+		391EC53A1F45378D0034E5C6 /* BlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 391EC5391F45378D0034E5C6 /* BlankView.m */; };
 		39683FDC1F3DFD4100F42D8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39683FDB1F3DFD4100F42D8A /* main.m */; };
 		39683FDF1F3DFD4100F42D8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39683FDE1F3DFD4100F42D8A /* AppDelegate.m */; };
 		39683FE21F3DFD4100F42D8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39683FE11F3DFD4100F42D8A /* ViewController.m */; };
@@ -28,6 +30,10 @@
 		391EC52A1F4149170034E5C6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		391EC52F1F41498F0034E5C6 /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
 		391EC5301F41498F0034E5C6 /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
+		391EC5351F4537090034E5C6 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		391EC5361F4537090034E5C6 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
+		391EC5381F45378D0034E5C6 /* BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlankView.h; sourceTree = "<group>"; };
+		391EC5391F45378D0034E5C6 /* BlankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlankView.m; sourceTree = "<group>"; };
 		39683FD71F3DFD4100F42D8A /* QuickFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39683FDB1F3DFD4100F42D8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39683FDD1F3DFD4100F42D8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,6 +139,10 @@
 				396840111F3EDEE000F42D8A /* QTreeStare.m */,
 				391EC52F1F41498F0034E5C6 /* UIColor+Category.h */,
 				391EC5301F41498F0034E5C6 /* UIColor+Category.m */,
+				391EC5351F4537090034E5C6 /* MapView.h */,
+				391EC5361F4537090034E5C6 /* MapView.m */,
+				391EC5381F45378D0034E5C6 /* BlankView.h */,
+				391EC5391F45378D0034E5C6 /* BlankView.m */,
 			);
 			name = FindQTree;
 			sourceTree = "<group>";
@@ -212,12 +222,14 @@
 				39683FE81F3DFD4100F42D8A /* QuickFind.xcdatamodeld in Sources */,
 				3968400F1F3ECF2500F42D8A /* QTree.m in Sources */,
 				3968400C1F3ECCFD00F42D8A /* QTreeNode.m in Sources */,
+				391EC5371F4537090034E5C6 /* MapView.m in Sources */,
 				396840121F3EDEE000F42D8A /* QTreeStare.m in Sources */,
 				391EC5311F41498F0034E5C6 /* UIColor+Category.m in Sources */,
 				39683FFD1F3DFEA300F42D8A /* ConfigManager.m in Sources */,
 				39683FE21F3DFD4100F42D8A /* ViewController.m in Sources */,
 				39683FDF1F3DFD4100F42D8A /* AppDelegate.m in Sources */,
 				396840091F3ECC8500F42D8A /* QTreeRect.m in Sources */,
+				391EC53A1F45378D0034E5C6 /* BlankView.m in Sources */,
 				39683FDC1F3DFD4100F42D8A /* main.m in Sources */,
 				39683FF71F3DFDF100F42D8A /* RectVO.m in Sources */,
 			);

@@ -12,7 +12,7 @@
 #import "ConfigManager.h"
 #import "UIColor+Category.h"
 
-@interface ViewController ()
+@interface ViewController ()<UIScrollViewDelegate>
 @property(nonatomic, strong)UIScrollView *gameContainer;
 @end
 
@@ -25,6 +25,7 @@
     // 1.创建UIScrollView
     self.gameContainer = [[UIScrollView alloc] init];
     self.gameContainer.frame = self.view.bounds; // frame中的size指UIScrollView的可视范围
+    self.gameContainer.delegate = self;
     self.gameContainer.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.gameContainer];
     int sheight = self.view.frame.size.height;
@@ -47,9 +48,9 @@
         //区域随机大小的树结构
         tree = [[QTreeStare alloc] initWith:nwidth height:nh prs:[ConfigManager sharedInstance].rectVec];
         //拼图item
-        [self createView:tree.maps startX:twdith startY:0 color:@"FFFFFF"];
+        [self createMapsView:tree.maps startX:twdith];
         //空白区域
-        [self createView:tree.blank startX:twdith startY:0 color:@"7AC5CD"];
+        [self createBlanksView:tree.blank startX:twdith];
         twdith += nwidth;
         if(twdith >= gwidth){
             break;
@@ -59,6 +60,66 @@
 }
 
 
+- (void)createMapsView:(NSArray *)maps startX:(int)startX
+{
+    int startY = 0;
+    for (QTreeRect *r in maps)
+    {
+        MapView *mapView = [[MapView alloc] initWithFrame:CGRectMake(r.x + startX, r.y + startY, r.width, r.height)];
+        mapView.rect = r;
+        [self.gameContainer addSubview:mapView];
+    }
+}
+
+- (void)createBlanksView:(NSArray *)maps startX:(int)startX
+{
+    int startY = 0;
+    for (QTreeRect *r in maps)
+    {
+        BlankView *blankView = [[BlankView alloc] initWithFrame:CGRectMake(r.x + startX, r.y + startY, r.width, r.height)];
+        [self.gameContainer addSubview:blankView];
+    }
+}
+
+
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    return;
+    for (UIView *viewToShake in scrollView.subviews)
+    {
+        if(viewToShake.frame.origin.x > ABS(scrollView.contentOffset.x) &&
+           viewToShake.frame.origin.x < ABS(scrollView.contentOffset.x) + self.view.frame.size.width)
+        {
+            [self check:viewToShake];
+        }
+    }
+}
+
+-(void)check:(UIView *)viewToShake
+{
+    CGFloat t = 0.1;
+    CGAffineTransform oriTrans = viewToShake.transform;
+    CGAffineTransform translateRight  = CGAffineTransformRotate(viewToShake.transform, t);
+    CGAffineTransform translateLeft = CGAffineTransformRotate(viewToShake.transform, -t);
+    
+    viewToShake.transform = translateLeft;
+    
+    [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+        [UIView setAnimationRepeatCount:4];
+        viewToShake.transform = translateRight;
+    } completion:^(BOOL finished){
+        if(finished){
+            [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                viewToShake.transform = oriTrans;
+            } completion:NULL];
+        }
+    }];
+    
+}
+
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -66,26 +127,5 @@
 
 
 
-- (void)createView:(NSArray *)maps startX:(int)startX startY:(int)startY color:(NSString *)color
-{
-//    NSLog(@"startX = %i", startX);
-    for (QTreeRect *r in maps) {
-        UIView *view = [self getView:r color:color];
-        CGRect frame = view.frame;
-        frame.origin = CGPointMake(view.frame.origin.x + startX, view.frame.origin.y + startY);
-        view.frame = frame;
-//        NSLog(@"frame %@", NSStringFromCGRect(frame));
-        [self.gameContainer addSubview:view];
-    }
-}
-
-- (UIView *)getView:(QTreeRect *)r color:(NSString *)color
-{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(r.x, r.y, r.width, r.height)];
-    view.backgroundColor = [UIColor colorWithHexString:color withAlpha:0.7];
-    view.layer.borderColor = [UIColor colorWithHexString:color].CGColor;
-    view.layer.borderWidth = 1;
-    return view;
-}
 
 @end

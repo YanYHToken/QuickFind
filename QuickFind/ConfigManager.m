@@ -35,14 +35,8 @@
 - (NSArray *)createRects
 {
     RectVO *rect1 = [[RectVO alloc] initWith:1 width:80 height:80];
-    RectVO *rect2 = [[RectVO alloc] initWith:2 width:80 height:90];
-    RectVO *rect3 = [[RectVO alloc] initWith:3 width:80 height:100];
-    RectVO *rect8 = [[RectVO alloc] initWith:7 width:100 height:80];
-    RectVO *rect9 = [[RectVO alloc] initWith:7 width:90 height:80];
-    RectVO *rect10 = [[RectVO alloc] initWith:7 width:120 height:120];
-    RectVO *rect11 = [[RectVO alloc] initWith:7 width:40 height:40];
-    return @[rect1, rect2, rect3, rect8, rect9, rect10, rect11];
-//    return @[rect1];
+    RectVO *rect2 = [[RectVO alloc] initWith:2 width:70 height:70];
+    return @[rect1, rect2];
 }
 
 @end

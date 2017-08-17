@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MapView.h"
+#import "BlankView.h"
 
 @interface ViewController : UIViewController
 

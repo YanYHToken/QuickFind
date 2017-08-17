@@ -87,6 +87,7 @@
             //判断区域是不是合法
             if (childRect.width >= self.minRect.width && childRect.height >= self.minRect.height)
             {
+                childRect.data = [pr data];
                 [vec addObject:childRect];
             }
             else
@@ -112,6 +113,7 @@
     index = MAX(1, index);
     //象限中的最小值
     index = MIN(BR, index);
+    
     //第一象限的rect
     QTreeRect *r = [[QTreeRect alloc] init];
     r.is_cut = NO;
@@ -134,32 +136,44 @@
         case UL:
             r.x = 0;
             r.y = 0;
+            r.quadrant = 1;
             r1.y = 0;
             r1.x = r.width;
+            r1.quadrant = 2;
             r2.x = 0;
             r2.y = r.height;
+            r2.quadrant = 3;
             r3.y = r1.height;
             r3.x = r2.width;
+            r3.quadrant = 4;
             break;
         case UR:
             r.x = r1.width;
             r.y = 0;
+            r.quadrant = 2;
             r1.y = 0;
             r1.x = 0;
+            r1.quadrant = 1;
             r2.x = r3.width;
             r2.y = r.height;
+            r2.quadrant = 3;
             r3.y = r1.height;
             r3.x = 0;
+            r3.quadrant = 4;
             break;
         case BL:
             r.x = 0;
             r.y = r2.height;
+            r.quadrant = 3;
             r1.x = r.width;
             r1.y = r3.height;
+            r1.quadrant = 1;
             r2.x = 0;
             r2.y = 0;
+            r2.quadrant = 4;
             r3.x = r2.width;
             r3.y = 0;
+            r2.quadrant = 2;
             break;
         case BR:
             r3.x = 0;
@@ -170,6 +184,7 @@
             r2.x = r3.width;
             r.x = r1.width;
             r.y = r2.height;
+            r.quadrant = 4;
             break;
     }
     return @[r, r1, r2, r3];

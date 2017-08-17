@@ -15,4 +15,5 @@
 @property(nonatomic, assign)int height;//item 的height
 @property(nonatomic, strong)id data; //区域数据
 @property(nonatomic, assign)BOOL is_cut; //default YES  [self init]
+@property(nonatomic, assign)int quadrant;//象限
 @end

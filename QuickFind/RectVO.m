@@ -20,4 +20,12 @@
     }
     return self;
 }
+
+- (NSDictionary *)data
+{
+    NSMutableDictionary *mutDict = [[NSMutableDictionary alloc] init];
+    [mutDict setObject:@(random() % 100) forKey:@"score"];
+    [mutDict setObject:@"type" forKey:@"type"];
+    return mutDict;
+}
 @end

@@ -13,8 +13,7 @@
 @property(nonatomic, assign)int width;
 @property(nonatomic, assign)int height;
 
-
 - (instancetype)initWith:(int)identity width:(int)width height:(int)height;
-   
 
+- (NSDictionary *)data;
 @end
